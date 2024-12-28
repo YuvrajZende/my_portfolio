@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&family=Open+Sans:wght@300;700&display=swap');
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Theme Variables */
+:root {
+    --background-color: #ffffff;
+    --text-color: #121212;
+    --accent-color: #f5900c;
+    --secondary-color: rgba(0, 0, 0, 0.6);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    text-align: center; /* Center-align all text */
+}
+
+.adjustment{
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    position: relative;
+}
+
+/* Header and Logo */
+header {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left; /* Keep portfolio heading left aligned */
+}
+
+.logo {
+    padding-top: 20px ;
+    padding-block: 20px;
+    position: absolute;
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+h1 {
+    padding-top: 10%;
+    font-size: 2.5rem; /* Increased size */
+    font-weight: 600;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+p.tagline {
+    font-size: 1.4rem; /* Slightly larger font size */
+    color: var(--secondary-color);
+    margin: 10px 0 40px;
+}
+
+.home-content h3 {
+    text-align: start;
+    padding-left: 10%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.home-content h1 {
+    font-size: 3.8rem; /* Increased size */
+    font-weight: 700;
+    line-height: 1.2;
+    font-style: medium 500 italic;
+}
+.home-content h4{
+    padding-left: 20px;
+    text-align: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+.home-content p{
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 1.2rem;
+}
+.home-content-map{
+    border-color: #8a8989;
+    font-size: 2rem;
+    padding: 10px 10px;
+    text-align: center;
+    border: #beb2b2;
+}
+
+
+
+/* certificate section  */
+.certificates-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007acc;
+    text-transform: uppercase;
+}
+
+/* Container for Certificate Cards */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Certificate Card */
+.certificate-card {
+    background-color: rgb(75, 73, 73);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.certificate-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin: 15px 0 5px;
+}
+
+.certificate-card p {
+    font-size: 1rem;
+    color: #8a8989;
+}
+
+/* Social Media Section */
+.social-media-section {
+    margin-top: 60px;
+}
+
+.social-media-section h2 {
+    font-size: 2.8rem; /* Increased size */
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.social-media-section p {
+    font-size: 1.3rem; /* Larger font */
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: var(--text-color);
+    font-size: 2.8rem; /* Increased icon size */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-media a:active {
+    transform: scale(1.1);
+}
+
+.social-media a[href*="twitter"] i {
+    color: #1DA1F2;
+}
+
+.social-media a[href*="linkedin"] i {
+    color: #0077B5;
+}
+
+.social-media a[href*="github"] i {
+    color: #333;
+}
+
+.social-media a[href*="instagram"] i {
+    color: #C13584;
+}
+
+/* Download CV Button Section */
+.download-cv-section {
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.3rem; /* Slightly larger text */
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f5a623;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 165, 35, 0.5);
+}
+
+/* Cards for Sections */
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #fff;
+    background-color: var(--accent-color);
+}
+
+/* Light/Dark Mode Toggle */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Dark Mode Variables */
+body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #ff4081;
+    --secondary-color: rgba(255, 255, 255, 0.6);
+    --card-bg: rgba(18, 18, 18, 0.8);
+    --card-shadow: rgba(0, 0, 0, 0.6);
+}
+
+.footer {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--secondary-color);
+    border-top: 1px solid var(--card-shadow);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 60px;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .navbar {
+        width: 100%;
+        max-width: none;
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: 10px;
+        padding: 8px 10px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a,
+    .social-icons a {
+        font-size: 0.9rem;
+    }
+}
+.about-intro{
+    background-color: var(--background-color);
+    h1 {
+        padding-top: 10%;
+        font-size: 2.5rem; /* Increased size */
+        font-weight: 600;
+        margin-top: 100px;
+        padding: 10px;
+    }
+    
+}
